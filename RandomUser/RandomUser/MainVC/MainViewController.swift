@@ -10,8 +10,8 @@ import UIKit
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let requestUser = NetworkManager<[UserModel]>()
-    var users = [UserModel]()
+    let requestUser = NetworkManager<Users>()
+    var users = Users()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -30,11 +30,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         requestUser.requestData(with: url, fail: { (errorMessage) in
             print(errorMessage)
         }, success: { (models) in
-            print(models)
-            for item in models {
-                self.users.append(item)
-            }
+            self.users = models
+            self.tableView.reloadData()
         })
+        
+        
     }
     
     private func setupUI() {
@@ -48,11 +48,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return users.results.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MainCustomTableViewCell.classNaming, for: indexPath) as? MainCustomTableViewCell else { return UITableViewCell() }
+        
+        let user = users.results[indexPath.row]
+        
+        cell.fill(with: user)
         
         return cell
     }

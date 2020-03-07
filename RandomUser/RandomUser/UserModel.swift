@@ -8,10 +8,49 @@
 
 import UIKit
 
-class UserModel: Codable {
-    var first = String()
-    var last = String()
-    var large = String()
+final class Users: Codable {
+    var results = [UserModel]()
+}
+
+final class Names: Codable {
+    var firstName = String()
+    var lastName = String()
+    
+    enum CodingKeys: String, CodingKey {
+        case firstName = "first"
+        case lastName = "last"
+    }
+}
+
+final class Location: Codable {
     var city = String()
     var state = String()
+    
+    enum CodingKeys: String, CodingKey {
+        case city, state
+    }
+}
+
+final class AvatarURL: Codable {
+    var avatarURL = String()
+    
+    enum CodingKeys: String, CodingKey {
+        case avatarURL = "large"
+    }
+}
+
+final class UserModel: Codable {
+//    var firstName = String()
+//    var lastName = String()
+//    var avatarURL = String()
+//    var city = String()
+//    var state = String()
+    var name = Names()
+    var location = Location()
+    var picture = AvatarURL()
+    
+    enum CodingKeys: String, CodingKey {
+        case name, location
+        case picture
+    }
 }

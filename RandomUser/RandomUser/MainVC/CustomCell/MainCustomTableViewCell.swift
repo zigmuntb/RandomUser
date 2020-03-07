@@ -19,10 +19,9 @@ class MainCustomTableViewCell: UITableViewCell, ClassNaming {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func fill(with model: UserModel) {
+        nameLabel.text = model.name.firstName + " " + model.name.lastName
+        
     }
     
 }
