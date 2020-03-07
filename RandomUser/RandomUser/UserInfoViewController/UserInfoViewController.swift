@@ -63,13 +63,11 @@ class UserInfoViewController: UIViewController, MFMailComposeViewControllerDeleg
         let alert = UIAlertController(title: "Call \(user.name.firstName)", message: "Please select a number to call", preferredStyle: .actionSheet)
         
         alert.addAction(UIAlertAction(title: "Phone: \(user.phone)", style: .default, handler: { (_) in
-            guard let number = URL(string: "tel://" + self.user.phone) else { return }
-            UIApplication.shared.open(number)
+            self.makeCall(with: self.user.phone)
         }))
         
         alert.addAction(UIAlertAction(title: "Cell: \(user.cell)", style: .default, handler: { (_) in
-            guard let number = URL(string: "tel://" + self.user.cell) else { return }
-            UIApplication.shared.open(number)
+            self.makeCall(with: self.user.cell)
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
@@ -79,7 +77,12 @@ class UserInfoViewController: UIViewController, MFMailComposeViewControllerDeleg
         self.present(alert, animated: true, completion: nil)
     }
     
-    func sendEmail() {
+    private func makeCall(with number: String) {
+        guard let number = URL(string: "tel://" + number) else { return }
+        UIApplication.shared.open(number)
+    }
+    
+    private func sendEmail() {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
