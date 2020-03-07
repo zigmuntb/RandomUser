@@ -18,6 +18,8 @@
 		436708B62413D458006D9563 /* MainCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436708B42413D458006D9563 /* MainCustomTableViewCell.swift */; };
 		436708B72413D458006D9563 /* MainCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 436708B52413D458006D9563 /* MainCustomTableViewCell.xib */; };
 		436708B92413D47A006D9563 /* ClassNaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436708B82413D47A006D9563 /* ClassNaming.swift */; };
+		436708BB2413D735006D9563 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436708BA2413D735006D9563 /* Constants.swift */; };
+		436708BD2413D898006D9563 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436708BC2413D898006D9563 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		436708B42413D458006D9563 /* MainCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCustomTableViewCell.swift; sourceTree = "<group>"; };
 		436708B52413D458006D9563 /* MainCustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCustomTableViewCell.xib; sourceTree = "<group>"; };
 		436708B82413D47A006D9563 /* ClassNaming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNaming.swift; sourceTree = "<group>"; };
+		436708BA2413D735006D9563 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		436708BC2413D898006D9563 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				436708AF2413CFB3006D9563 /* MainNavigationController.swift */,
 				436708B12413D15F006D9563 /* NetworkManager.swift */,
 				436708B82413D47A006D9563 /* ClassNaming.swift */,
+				436708BA2413D735006D9563 /* Constants.swift */,
+				436708BC2413D898006D9563 /* UserModel.swift */,
 			);
 			path = RandomUser;
 			sourceTree = "<group>";
@@ -177,6 +183,8 @@
 				436708B02413CFB3006D9563 /* MainNavigationController.swift in Sources */,
 				436708992413CC62006D9563 /* SceneDelegate.swift in Sources */,
 				436708B62413D458006D9563 /* MainCustomTableViewCell.swift in Sources */,
+				436708BD2413D898006D9563 /* UserModel.swift in Sources */,
+				436708BB2413D735006D9563 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
