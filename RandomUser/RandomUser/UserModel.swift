@@ -22,6 +22,22 @@ final class Names: Codable {
     }
 }
 
+final class Login: Codable {
+    var username = String()
+    
+    enum CodingKeys: String, CodingKey {
+        case username
+    }
+}
+
+final class DateOfBirth: Codable {
+    var dateOfBirth = String()
+    
+    enum CodingKeys: String, CodingKey {
+        case dateOfBirth = "date"
+    }
+}
+
 final class Location: Codable {
     var city = String()
     var state = String()
@@ -40,17 +56,23 @@ final class AvatarURL: Codable {
 }
 
 final class UserModel: Codable {
-//    var firstName = String()
-//    var lastName = String()
-//    var avatarURL = String()
-//    var city = String()
-//    var state = String()
     var name = Names()
     var location = Location()
     var picture = AvatarURL()
+    var dateOfBirth = DateOfBirth()
+    var username = Login()
+    var gender = String()
+    var phone = String()
+    var cell = String()
+    var email = String()
     
     enum CodingKeys: String, CodingKey {
         case name, location
         case picture
+        case dateOfBirth = "dob"
+        case username = "login"
+        case gender
+        case phone, cell
+        case email
     }
 }
