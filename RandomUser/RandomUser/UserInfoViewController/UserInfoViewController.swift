@@ -22,7 +22,7 @@ class UserInfoViewController: UIViewController, MFMailComposeViewControllerDeleg
     @IBOutlet weak var cellButton: UIButton!
     @IBOutlet weak var emailButton: UIButton!
     
-    //MARK: - Inits
+    //MARK: - Initialization
     init(model: UserModel) {
         super.init(nibName: nil, bundle: nil)
         
@@ -59,7 +59,7 @@ class UserInfoViewController: UIViewController, MFMailComposeViewControllerDeleg
         sendEmail()
     }
     
-    //MARK: - Private methods
+    //MARK: - Private
     private func setupUI() {
         self.title = user.username.username
         imageView.layer.cornerRadius = imageView.frame.height/2
@@ -100,6 +100,7 @@ class UserInfoViewController: UIViewController, MFMailComposeViewControllerDeleg
     private func sendEmail() {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
+            mail.modalPresentationStyle = .fullScreen
             mail.mailComposeDelegate = self
             mail.setToRecipients(["\(user.email)"])
             mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
