@@ -2,12 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "SwiftyJSON",
-        "repositoryURL": "https://github.com/SwiftyJSON/SwiftyJSON",
+        "package": "SDWebImage",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImage",
         "state": {
           "branch": null,
-          "revision": "2b6054efa051565954e1d2b9da831680026cd768",
-          "version": "5.0.0"
+          "revision": "aa7cc070ccf01ce6ea85dd0b3176f712ac23ea1a",
+          "version": "5.6.0"
         }
       }
     ]

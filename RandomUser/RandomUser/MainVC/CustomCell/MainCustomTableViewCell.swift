@@ -21,7 +21,8 @@ class MainCustomTableViewCell: UITableViewCell, ClassNaming {
 
     func fill(with model: UserModel) {
         nameLabel.text = model.name.firstName + " " + model.name.lastName
-        
+        usersInfoLabel.text = model.location.city + ", " + model.location.state
+        ImageLoader.loadImage(with: .grayLarge, urlString: model.picture.avatarURL, imageView: avatarImageView, completion: nil)
     }
     
 }
