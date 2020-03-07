@@ -13,8 +13,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     let requestUser = NetworkManager<Users>()
     var users = Users()
     
+    //MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
+    //MARK: - Inits
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +25,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         makeRequest()
     }
     
+    //MARK: - Private methods
     private func makeRequest() {
         guard let url = URL(string: Constants.url) else { return }
         
@@ -44,6 +47,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.register(UINib(nibName: MainCustomTableViewCell.classNaming, bundle: nil), forCellReuseIdentifier: MainCustomTableViewCell.classNaming)
     }
     
+    //MARK: - <TableView>
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         navigationController?.pushViewController(UserInfoViewController(model: users.results[indexPath.row]), animated: true)
     }

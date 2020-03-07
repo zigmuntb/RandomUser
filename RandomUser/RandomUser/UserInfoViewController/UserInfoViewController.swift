@@ -13,14 +13,16 @@ class UserInfoViewController: UIViewController, MFMailComposeViewControllerDeleg
 
     var user = UserModel()
     
+    //MARK: - IBOutlets
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var dateOfBirthLabel: UILabel!
-    @IBOutlet weak var phoneNumberLabel: UILabel!
-    @IBOutlet weak var cellNumberLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneButton: UIButton!
+    @IBOutlet weak var cellButton: UIButton!
+    @IBOutlet weak var emailButton: UIButton!
     
+    //MARK: - Inits
     init(model: UserModel) {
         super.init(nibName: nil, bundle: nil)
         
@@ -37,6 +39,7 @@ class UserInfoViewController: UIViewController, MFMailComposeViewControllerDeleg
         setupUI()
     }
 
+    //MARK: - IBActions
     @IBAction func callButtonTapped(_ sender: UIButton) {
         presentCallAlert()
     }
@@ -44,7 +47,19 @@ class UserInfoViewController: UIViewController, MFMailComposeViewControllerDeleg
     @IBAction func mailButtonTapped(_ sender: UIButton) {
         sendEmail()
     }
+    @IBAction func phoneButtonTapped(_ sender: UIButton) {
+        makeCall(with: user.phone)
+    }
     
+    @IBAction func cellButtonTapped(_ sender: UIButton) {
+        makeCall(with: user.cell)
+    }
+    
+    @IBAction func emailButtonTapped(_ sender: UIButton) {
+        sendEmail()
+    }
+    
+    //MARK: - Private methods
     private func setupUI() {
         self.title = user.username.username
         imageView.layer.cornerRadius = imageView.frame.height/2
@@ -54,9 +69,9 @@ class UserInfoViewController: UIViewController, MFMailComposeViewControllerDeleg
         nameLabel.text = user.name.firstName + " " + user.name.lastName
         genderLabel.text = "Gender: \(user.gender)"
         dateOfBirthLabel.text = "Date of birth: " + String(user.dateOfBirth.dateOfBirth.prefix(10))
-        phoneNumberLabel.text = user.phone
-        cellNumberLabel.text = user.cell
-        emailLabel.text = user.email
+        phoneButton.setTitle(user.phone, for: .normal)
+        cellButton.setTitle(user.cell, for: .normal)
+        emailButton.setTitle(user.email, for: .normal)
     }
     
     private func presentCallAlert() {
@@ -91,7 +106,7 @@ class UserInfoViewController: UIViewController, MFMailComposeViewControllerDeleg
 
             present(mail, animated: true)
         } else {
-            print("There was an error opening mail")
+            print("There was an error presenting mail")
         }
     }
 
