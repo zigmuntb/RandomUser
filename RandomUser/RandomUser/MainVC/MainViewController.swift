@@ -24,17 +24,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     private func makeRequest() {
-        
         guard let url = URL(string: Constants.url) else { return }
         
         requestUser.requestData(with: url, fail: { (errorMessage) in
             print(errorMessage)
-        }, success: { (models) in
-            self.users = models
+        }, success: { (model) in
+            self.users.results += model.results
             self.tableView.reloadData()
         })
-        
-        
     }
     
     private func setupUI() {
@@ -57,6 +54,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let user = users.results[indexPath.row]
         
         cell.fill(with: user)
+        
+        if indexPath.row == users.results.count - 3 {
+            makeRequest()
+        }
         
         return cell
     }

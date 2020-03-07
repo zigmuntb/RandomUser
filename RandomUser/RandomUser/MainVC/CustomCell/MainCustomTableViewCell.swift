@@ -16,9 +16,15 @@ class MainCustomTableViewCell: UITableViewCell, ClassNaming {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        setupUI()
     }
 
+    private func setupUI() {
+        avatarImageView.layer.cornerRadius = avatarImageView.frame.height/2
+        avatarImageView.layer.masksToBounds = true
+    }
+    
     func fill(with model: UserModel) {
         nameLabel.text = model.name.firstName + " " + model.name.lastName
         usersInfoLabel.text = model.location.city + ", " + model.location.state
