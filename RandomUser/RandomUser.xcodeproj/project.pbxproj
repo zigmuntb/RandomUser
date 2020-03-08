@@ -13,7 +13,6 @@
 		436708A32413CC64006D9563 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436708A12413CC64006D9563 /* LaunchScreen.storyboard */; };
 		436708AD2413CFA2006D9563 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436708AB2413CFA2006D9563 /* MainViewController.swift */; };
 		436708AE2413CFA2006D9563 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 436708AC2413CFA2006D9563 /* MainViewController.xib */; };
-		436708B02413CFB3006D9563 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436708AF2413CFB3006D9563 /* MainNavigationController.swift */; };
 		436708B22413D15F006D9563 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436708B12413D15F006D9563 /* NetworkManager.swift */; };
 		436708B62413D458006D9563 /* MainCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436708B42413D458006D9563 /* MainCustomTableViewCell.swift */; };
 		436708B72413D458006D9563 /* MainCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 436708B52413D458006D9563 /* MainCustomTableViewCell.xib */; };
@@ -35,7 +34,6 @@
 		436708A42413CC64006D9563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		436708AB2413CFA2006D9563 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		436708AC2413CFA2006D9563 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		436708AF2413CFB3006D9563 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		436708B12413D15F006D9563 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		436708B42413D458006D9563 /* MainCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCustomTableViewCell.swift; sourceTree = "<group>"; };
 		436708B52413D458006D9563 /* MainCustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCustomTableViewCell.xib; sourceTree = "<group>"; };
@@ -78,19 +76,13 @@
 		436708952413CC62006D9563 /* RandomUser */ = {
 			isa = PBXGroup;
 			children = (
-				43AB9F852413FD0B0099B911 /* UserInfoViewController */,
-				436708AA2413CF92006D9563 /* MainVC */,
-				436708962413CC62006D9563 /* AppDelegate.swift */,
-				436708982413CC62006D9563 /* SceneDelegate.swift */,
-				4367089F2413CC64006D9563 /* Assets.xcassets */,
-				436708A12413CC64006D9563 /* LaunchScreen.storyboard */,
-				436708A42413CC64006D9563 /* Info.plist */,
-				436708AF2413CFB3006D9563 /* MainNavigationController.swift */,
-				436708B12413D15F006D9563 /* NetworkManager.swift */,
-				436708B82413D47A006D9563 /* ClassNaming.swift */,
-				436708BA2413D735006D9563 /* Constants.swift */,
-				436708BC2413D898006D9563 /* UserModel.swift */,
-				43AB9F832413F8600099B911 /* ImageLoader.swift */,
+				4373F1F724153616000B7826 /* AppDelegate */,
+				43B18EE6241537890093C230 /* Constants */,
+				43B18EE7241537950093C230 /* Models */,
+				43B18EE52415377A0093C230 /* Protocols */,
+				43B18EE32415369C0093C230 /* Resources */,
+				43B18EE42415374C0093C230 /* Services */,
+				4373F1F624153601000B7826 /* UI */,
 			);
 			path = RandomUser;
 			sourceTree = "<group>";
@@ -114,6 +106,24 @@
 			path = CustomCell;
 			sourceTree = "<group>";
 		};
+		4373F1F624153601000B7826 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				43AB9F852413FD0B0099B911 /* UserInfoViewController */,
+				436708AA2413CF92006D9563 /* MainVC */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4373F1F724153616000B7826 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				436708962413CC62006D9563 /* AppDelegate.swift */,
+				436708982413CC62006D9563 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		43AB9F852413FD0B0099B911 /* UserInfoViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,49 @@
 				43AB9F872413FD2A0099B911 /* UserInfoViewController.xib */,
 			);
 			path = UserInfoViewController;
+			sourceTree = "<group>";
+		};
+		43B18EE32415369C0093C230 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4367089F2413CC64006D9563 /* Assets.xcassets */,
+				436708A12413CC64006D9563 /* LaunchScreen.storyboard */,
+				436708A42413CC64006D9563 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		43B18EE42415374C0093C230 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				436708B12413D15F006D9563 /* NetworkManager.swift */,
+				43AB9F832413F8600099B911 /* ImageLoader.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		43B18EE52415377A0093C230 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				436708B82413D47A006D9563 /* ClassNaming.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		43B18EE6241537890093C230 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				436708BA2413D735006D9563 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		43B18EE7241537950093C230 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				436708BC2413D898006D9563 /* UserModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +261,6 @@
 				436708B22413D15F006D9563 /* NetworkManager.swift in Sources */,
 				436708B92413D47A006D9563 /* ClassNaming.swift in Sources */,
 				43AB9F882413FD2A0099B911 /* UserInfoViewController.swift in Sources */,
-				436708B02413CFB3006D9563 /* MainNavigationController.swift in Sources */,
 				436708992413CC62006D9563 /* SceneDelegate.swift in Sources */,
 				436708B62413D458006D9563 /* MainCustomTableViewCell.swift in Sources */,
 				436708BD2413D898006D9563 /* UserModel.swift in Sources */,
@@ -350,7 +402,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R7UFNAWC4M;
-				INFOPLIST_FILE = RandomUser/Info.plist;
+				INFOPLIST_FILE = RandomUser/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,7 +420,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R7UFNAWC4M;
-				INFOPLIST_FILE = RandomUser/Info.plist;
+				INFOPLIST_FILE = RandomUser/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

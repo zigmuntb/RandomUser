@@ -11,6 +11,10 @@ import MessageUI
 
 class UserInfoViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
+    struct Config {
+        static let dateLength = 10
+    }
+    
     var user = UserModel()
     
     //MARK: - IBOutlets
@@ -71,10 +75,10 @@ class UserInfoViewController: UIViewController, MFMailComposeViewControllerDeleg
         imageView.layer.masksToBounds = true
         ImageLoader.loadImage(with: .grayLarge, urlString: user.picture.avatarURL, imageView: imageView, completion: nil)
         
-        registeredLabel.text = "Registered: " + String(user.registrationDate.regDate.prefix(10))
+        registeredLabel.text = "Registered: " + String(user.registrationDate.regDate.prefix(Config.dateLength))
         nameLabel.text = user.name.firstName + " " + user.name.lastName
         genderLabel.text = "Gender: \(user.gender)"
-        dateOfBirthLabel.text = "Date of birth: " + String(user.dateOfBirth.dateOfBirth.prefix(10))
+        dateOfBirthLabel.text = "Date of birth: " + String(user.dateOfBirth.dateOfBirth.prefix(Config.dateLength))
         phoneButton.setTitle(user.phone, for: .normal)
         cellButton.setTitle(user.cell, for: .normal)
         emailButton.setTitle(user.email, for: .normal)
