@@ -61,6 +61,10 @@ class UserInfoViewController: UIViewController, MFMailComposeViewControllerDeleg
     
     //MARK: - Private
     private func setupUI() {
+        phoneButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
+        cellButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
+        emailButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
+
         self.title = user.username.username
         imageView.layer.cornerRadius = imageView.frame.height/2
         imageView.layer.masksToBounds = true
