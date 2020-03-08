@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4311EA092415390F003462F8 /* UIViewController+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4311EA082415390F003462F8 /* UIViewController+Extentions.swift */; };
 		436708972413CC62006D9563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436708962413CC62006D9563 /* AppDelegate.swift */; };
 		436708992413CC62006D9563 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436708982413CC62006D9563 /* SceneDelegate.swift */; };
 		436708A02413CC64006D9563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4367089F2413CC64006D9563 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4311EA082415390F003462F8 /* UIViewController+Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extentions.swift"; sourceTree = "<group>"; };
 		436708932413CC62006D9563 /* RandomUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		436708962413CC62006D9563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		436708982413CC62006D9563 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4311EA0A2415391D003462F8 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				4311EA082415390F003462F8 /* UIViewController+Extentions.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		4367088A2413CC62006D9563 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 			children = (
 				4373F1F724153616000B7826 /* AppDelegate */,
 				43B18EE6241537890093C230 /* Constants */,
+				4311EA0A2415391D003462F8 /* Extentions */,
 				43B18EE7241537950093C230 /* Models */,
 				43B18EE52415377A0093C230 /* Protocols */,
 				43B18EE32415369C0093C230 /* Resources */,
@@ -262,6 +273,7 @@
 				436708B92413D47A006D9563 /* ClassNaming.swift in Sources */,
 				43AB9F882413FD2A0099B911 /* UserInfoViewController.swift in Sources */,
 				436708992413CC62006D9563 /* SceneDelegate.swift in Sources */,
+				4311EA092415390F003462F8 /* UIViewController+Extentions.swift in Sources */,
 				436708B62413D458006D9563 /* MainCustomTableViewCell.swift in Sources */,
 				436708BD2413D898006D9563 /* UserModel.swift in Sources */,
 				436708BB2413D735006D9563 /* Constants.swift in Sources */,

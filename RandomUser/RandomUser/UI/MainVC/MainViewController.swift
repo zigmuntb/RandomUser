@@ -30,11 +30,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     private func makeRequest() {
         guard let url = URL(string: Constants.url) else { return }
         
-        requestUser.requestData(with: url, fail: { (errorMessage) in
-            print(errorMessage)
-        }, success: { (model) in
-            self.users.results += model.results
-            self.tableView.reloadData()
+        requestUser.requestData(with: url, fail: { [weak self] (errorMessage) in
+            self?.showErrorAlert(message: errorMessage)
+        }, success: { [weak self] (model) in
+            self?.users.results += model.results
+            self?.tableView.reloadData()
         })
     }
     
