@@ -21,6 +21,7 @@ class UserInfoViewController: UIViewController, MFMailComposeViewControllerDeleg
     @IBOutlet weak var phoneButton: UIButton!
     @IBOutlet weak var cellButton: UIButton!
     @IBOutlet weak var emailButton: UIButton!
+    @IBOutlet weak var registeredLabel: UILabel!
     
     //MARK: - Initialization
     init(model: UserModel) {
@@ -70,6 +71,7 @@ class UserInfoViewController: UIViewController, MFMailComposeViewControllerDeleg
         imageView.layer.masksToBounds = true
         ImageLoader.loadImage(with: .grayLarge, urlString: user.picture.avatarURL, imageView: imageView, completion: nil)
         
+        registeredLabel.text = "Registered: " + String(user.registrationDate.regDate.prefix(10))
         nameLabel.text = user.name.firstName + " " + user.name.lastName
         genderLabel.text = "Gender: \(user.gender)"
         dateOfBirthLabel.text = "Date of birth: " + String(user.dateOfBirth.dateOfBirth.prefix(10))

@@ -22,6 +22,15 @@ final class Names: Codable {
     }
 }
 
+final class Registered: Codable {
+    var regDate = String()
+    
+    enum CodingKeys: String, CodingKey {
+        case regDate = "date"
+        
+    }
+}
+
 final class Login: Codable {
     var username = String()
     
@@ -65,6 +74,7 @@ final class UserModel: Codable {
     var phone = String()
     var cell = String()
     var email = String()
+    var registrationDate = Registered()
     
     enum CodingKeys: String, CodingKey {
         case name, location
@@ -74,5 +84,6 @@ final class UserModel: Codable {
         case gender
         case phone, cell
         case email
+        case registrationDate = "registered"
     }
 }

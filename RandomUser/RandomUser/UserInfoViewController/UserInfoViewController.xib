@@ -16,6 +16,7 @@
                 <outlet property="imageView" destination="imt-TJ-Sqj" id="Sp3-lt-s8b"/>
                 <outlet property="nameLabel" destination="68c-7l-33i" id="Z85-mo-ecR"/>
                 <outlet property="phoneButton" destination="cJL-E8-s8Z" id="3MM-Jm-yCv"/>
+                <outlet property="registeredLabel" destination="l4T-f0-TjG" id="ij6-hb-At6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,7 +32,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="288" height="552"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="r7l-Lr-D2K">
-                                    <rect key="frame" x="0.0" y="0.0" width="288" height="640.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="288" height="690.5"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6Z-QY-AS9">
                                             <rect key="frame" x="0.0" y="0.0" width="288" height="128"/>
@@ -151,26 +152,32 @@
                                             <color key="textColor" red="0.49701209940000002" green="0.4844986389" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registered:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4T-f0-TjG">
+                                            <rect key="frame" x="0.0" y="336.5" width="288" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.49701209940000002" green="0.4844986389" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DA5-nZ-dvS">
-                                            <rect key="frame" x="0.0" y="336.5" width="288" height="16"/>
+                                            <rect key="frame" x="0.0" y="370.5" width="288" height="16"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="16" id="I4I-f0-lnn"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OX3-XB-hkR">
-                                            <rect key="frame" x="0.0" y="368.5" width="288" height="20.5"/>
+                                            <rect key="frame" x="0.0" y="402.5" width="288" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ng3-dZ-ax8">
-                                            <rect key="frame" x="0.0" y="405" width="288" height="18"/>
+                                            <rect key="frame" x="0.0" y="439" width="288" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJL-E8-s8Z">
-                                            <rect key="frame" x="0.0" y="439" width="288" height="33"/>
+                                            <rect key="frame" x="0.0" y="473" width="288" height="33"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <state key="normal" title="Button"/>
                                             <connections>
@@ -178,13 +185,13 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2n-Jy-fna">
-                                            <rect key="frame" x="0.0" y="488" width="288" height="18"/>
+                                            <rect key="frame" x="0.0" y="522" width="288" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ix-43-1YK">
-                                            <rect key="frame" x="0.0" y="522" width="288" height="33"/>
+                                            <rect key="frame" x="0.0" y="556" width="288" height="33"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <state key="normal" title="Button"/>
                                             <connections>
@@ -192,19 +199,26 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKE-Az-0LZ">
-                                            <rect key="frame" x="0.0" y="571" width="288" height="20.5"/>
+                                            <rect key="frame" x="0.0" y="605" width="288" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPC-sP-YSP">
-                                            <rect key="frame" x="0.0" y="607.5" width="288" height="33"/>
+                                            <rect key="frame" x="0.0" y="641.5" width="288" height="33"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <state key="normal" title="Button"/>
                                             <connections>
                                                 <action selector="emailButtonTapped:" destination="-1" eventType="touchUpInside" id="kAW-6a-ZgO"/>
                                             </connections>
                                         </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFX-pS-qUK">
+                                            <rect key="frame" x="0.0" y="690.5" width="288" height="0.0"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" id="MBU-42-Fty"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                 </stackView>
                             </subviews>
